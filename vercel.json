@@ -1,16 +1,16 @@
 {
   "routes": [
     {
-      "src": "/retro-bowl/(.*)",    // Match URLs starting with /blog/
-      "dest": "/html/retro-bowl/$1" // Map to the blog folder
+      "src": "/retro-bowl/(.*)",
+      "dest": "/html/retro-bowl/$1"
     },
     {
-      "src": "/water-color-sort/(.*)",    // Match URLs starting with /welcome/
-      "dest": "/html/water-color-sort/$1" // Map to the welcome folder
+      "src": "/water-color-sort/(.*)",
+      "dest": "/html/water-color-sort/$1"
     },
     {
-      "src": "/(.*)",    // Match all other URLs
-      "dest": "/html/$1" // Map to the root html folder
+      "src": "/(.*)",
+      "dest": "/html/$1"
     }
   ]
 }
