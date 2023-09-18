@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCD3FEY6FG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PCD3FEY6FG');
+    </script>
+    <link rel="icon" href="https://i.ibb.co/GWF3nk2/videogames-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa's Pizzeria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS for top-left alignment */
+        textarea {
+            height: 300px; /* Adjust the height as needed */
+            width: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            resize: none; /* Prevents users from resizing the textarea */
+            vertical-align: top; /* Align text to the top */
+            line-height: 1.2; /* Adjust line height for better alignment */
+        }
+        /* Updated CSS for the fullscreen button */
+        #fullscreen-button {
+            position: absolute;
+            top: 50%;
+            right: 10px; /* Adjust this value for the desired spacing from the right */
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.ibb.co/3NBN0J7/image.png'); /* Use your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-indent: -9999px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tap Tap Games</h1>
+    </header>
+    <nav>
+        <a href="https://egemenbdk.github.io/taptapgames/">Home</a>
+        <a href="https://egemenbdk.github.io/taptapgames/suggestions">Suggestions</a>
+    </nav>
+    <div class="scrollable-container">
+        <div class="container">
+            <!-- New Ruffle Embed -->
+            <script src="https://xxsibxx.github.io/ruffleembedsetup112/ruffle/ruffle.js"></script>
+            <div class="swf" dir="ltr" style="text-align: left;" trbidi="on">
+                <embed id="flash-content" height="480" src="https://egemenbdk.github.io/papaspizzeria/papaspizzeria_v2.swf" type="application/x-shockwave-flash" width="620"></embed>
+            </div>
+            <!-- Fullscreen button -->
+            <button id="fullscreen-button">Fullscreen</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const flashContent = document.getElementById('flash-content');
+            const fullscreenButton = document.getElementById('fullscreen-button');
+
+            fullscreenButton.addEventListener('click', () => {
+                if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                    if (flashContent.requestFullscreen) {
+                        flashContent.requestFullscreen();
+                    } else if (flashContent.mozRequestFullScreen) {
+                        flashContent.mozRequestFullScreen();
+                    } else if (flashContent.webkitRequestFullscreen) {
+                        flashContent.webkitRequestFullscreen();
+                    } else if (flashContent.msRequestFullscreen) {
+                        flashContent.msRequestFullscreen();
+                    }
+                    fullscreenButton.textContent = 'Exit Fullscreen';
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                    fullscreenButton.textContent = 'Fullscreen';
+                }
+            });
+
+            // Exit fullscreen on ESC key press
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement)) {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                    fullscreenButton.textContent = 'Fullscreen';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

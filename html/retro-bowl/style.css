@@ -1,0 +1,166 @@
+/* Updated CSS for the scrollable container */
+.scrollable-container {
+    height: auto; /* Allow the container to expand based on its content */
+    overflow-y: auto; /* Enable vertical scrolling and show scrollbar only when needed */
+    overflow-x: hidden; /* Hide horizontal scrollbar if it's not needed */
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background image for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background to the container */
+}
+
+/* Header styles */
+header {
+    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background color for better readability */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Fredoka One';
+    src: url('/fonts/FredokaOneFont.ttf') format('truetype'); /* Path to the font file */
+    /* You can also specify other font formats (e.g., woff, woff2) for cross-browser compatibility */
+}
+
+header h1 {
+    font-size: 34px;
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: lighter; /* You can also use "normal" for a similar effect */
+}
+
+
+/* Navigation styles */
+nav {
+    background-color: rgba(68, 68, 68, 0.7); /* Semi-transparent background color for better readability */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Fredoka One';
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* Game thumbnail styles */
+.game {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    width: 48%; /* Set the width to 48% to allow two games per row */
+    display: inline-block; /* Add this to make games appear side by side */
+}
+
+.game-image {
+    float: left; /* Float the image to the left */
+    width: 100%; /* Make the image cover the entire left half of the button */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    padding-bottom: 33.33%; /* Maintain the 3:2 aspect ratio (adjust as needed) */
+}
+
+.game-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text */
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Adjust the size of the button text */
+.game a {
+    font-size: 14px; /* Adjust the font size for the button text */
+}
+
+/* Footer styles (if needed) */
+footer {
+    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background color for better readability */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Add your existing styles here */
+
+/* Darker background for the whole website */
+body {
+    background-color: #6e6e6e; /* Really dark gray background for the game container */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: auto; /* Hide overflow to crop the container */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Game container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #6e6e6e; /* Really dark gray background for the game container */
+    position: relative; /* Add this for button positioning */
+}
+
+/* Embedded game iframe */
+.container iframe {
+    border: none; /* Remove border to maximize the game */
+    width: 100%; /* Maximize the game width */
+    height: 100%; /* Maximize the game height */
+}
+
+/* Fullscreen button styling */
+#fullscreen-button {
+    position: ri;
+    top: 20px; /* Move the button away from the top */
+    right: 20px; /* Move the button away from the right */
+    width: 50px; /* Set the width of the button */
+    height: 50px; /* Set the height of the button */
+    background-image: url('https://i.ibb.co/3NBN0J7/image.png'); /* Use your image */
+    background-size: cover; /* Resize the image to fit the button */
+    background-repeat: no-repeat;
+    background-color: transparent; /* Remove any background color */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-indent: -9999px; /* Hide text */
+    z-index: 2; /* Ensure the button is above the iframe */
+}
+
+

@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Fredoka One';
+    src: url('/fonts/FredokaOneFont.ttf') format('truetype'); /* Path to the font file */
+    /* You can also specify other font formats (e.g., woff, woff2) for cross-browser compatibility */
+}
+
+/* Add your dark theme styling here */
+body {
+    background-color: #6E6E6E;
+    color: #fff;
+    font-family: 'Fredoka One';
+    font-weight: lighter;
+}
+
+/* Add your dark theme styling here */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+header {
+    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background color for better readability */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 34px;
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: lighter; /* You can also use "normal" for a similar effect */
+}
+
+
+/* Navigation styles */
+nav {
+    background-color: rgba(68, 68, 68, 0.7); /* Semi-transparent background color for better readability */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Fredoka One';
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.scrollable-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    background-color: #6E6E6E;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-weight: lighter;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+label {
+    font-weight: lighter;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Fredoka One';
+    font-weight: lighter;
+}
+
+button:hover {
+    background-color: #0056b3; /* New background color on hover */
+}
+
+header {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #505050;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+}
+
+.scrollable-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    background-color: #6e6e6e;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
